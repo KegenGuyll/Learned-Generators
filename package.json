@@ -15,7 +15,8 @@
     "clean": "del-cli dist",
     "check": "prettier --check . && eslint .",
     "lint": "prettier --write . && eslint .",
-    "watch": "tstl --watch --outDir ~/Zomboid/mods"
+    "watch": "tstl --watch --outDir ~/Zomboid/mods",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
