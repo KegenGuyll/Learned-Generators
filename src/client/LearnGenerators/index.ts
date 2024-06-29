@@ -7,14 +7,20 @@
  */
 
 // PipeWrench API.
-import { getPlayer } from '@asledgehammer/pipewrench';
 import * as Events from '@asledgehammer/pipewrench-events';
-// Example reference API.
-import { addRedSquare, alertObjectsAdded, greetPlayer } from './api/ExampleAPI';
+
+Events.onModsModified.addListener(() => {
+  // Add all mod initialization code here.
+});
 
 // Add all initialization code here.
 Events.onGameStart.addListener(() => {
-  addRedSquare();
-  greetPlayer(getPlayer());
-  alertObjectsAdded();
+  Events.levelPerk.addListener((player, perk, level, levelUp) => {
+    if(perk.getName() === 'Electrical' && levelUp) {
+      if(level === 1) {
+        player.learnRecipe("Generator")
+        player.setHaloNote("You now understand Generators!")
+      }
+    }
+  });
 });
