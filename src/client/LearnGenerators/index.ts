@@ -9,10 +9,6 @@
 // PipeWrench API.
 import * as Events from '@asledgehammer/pipewrench-events';
 
-Events.onModsModified.addListener(() => {
-  // Add all mod initialization code here.
-});
-
 // Add all initialization code here.
 Events.onGameStart.addListener(() => {
   Events.levelPerk.addListener((player, perk, level, levelUp) => {
