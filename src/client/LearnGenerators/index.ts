@@ -12,10 +12,10 @@ import * as Events from '@asledgehammer/pipewrench-events';
 // Add all initialization code here.
 Events.onGameStart.addListener(() => {
   Events.levelPerk.addListener((player, perk, level, levelUp) => {
-    if(perk.getName() === 'Electrical' && levelUp) {
-      if(level === 1) {
-        player.learnRecipe("Generator")
-        player.setHaloNote("You now understand Generators!")
+    if (perk.getName() === 'Electrical' && levelUp) {
+      if (level === 3) {
+        player.learnRecipe('Generator');
+        player.setHaloNote('You now understand Generators!');
       }
     }
   });
