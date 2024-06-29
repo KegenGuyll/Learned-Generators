@@ -1,10 +1,10 @@
 {
   "modInfo": {
-    "name": "My First Mod",
+    "name": "Learned Generators",
     "poster": "./poster.png",
-    "description": "arf",
-    "id": "12312312",
-    "url": "https://www.google.com,"
+    "description": "With enough experience, you can learn to operate the generators.",
+    "id": "3278042539",
+    "url": "https://github.com/KegenGuyll/Learned-Generators"
   },
   "modelsDir": "./src/models",
   "texturesDir": "./src/textures",
